@@ -1,6 +1,8 @@
-const path = require('path');
+// const path = require('path');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 module.exports = {
     entry: path.join(__dirname, 'src', 'index.js'),
@@ -14,6 +16,27 @@ module.exports = {
     },
     devServer: {
         contentBase: path.join(__dirname, 'src')
+    },
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
+            },
+            {
+                test: /\.(css|scss)$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ]
+            },
+            {
+                test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+                loaders: ['file-loader']
+            }
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
