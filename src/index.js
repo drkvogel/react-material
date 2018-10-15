@@ -1,17 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { createBrowserHistory } from "history";
+import { Router, Route, Switch } from "react-router-dom";
 
-import "index.scss"
+import "assets/css/material-dashboard-react.css?v=1.5.0";
 
-let HelloWorld = () => {
-    return <h1>Hello there World!</h1>
-}
+import indexRoutes from "routes/index.jsx";
+
+const hist = createBrowserHistory();
 
 ReactDOM.render(
-    <HelloWorld/>,
-    document.getElementById("root")
+  <Router history={hist}>
+    <Switch>
+      {indexRoutes.map((prop, key) => {
+        return <Route path={prop.path} component={prop.component} key={key} />;
+      })}
+    </Switch>
+  </Router>,
+  document.getElementById("root")
 );
-
-// (function () {
-//     console.log("hey mister");
-// }());
