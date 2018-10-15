@@ -4,12 +4,15 @@
   "description": "https://medium.freecodecamp.org/how-to-use-reactjs-with-webpack-4-babel-7-and-material-design-ff754586f618",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack",
+    "start": "webpack-dev-server --open"
   },
   "keywords": [],
   "author": "Chris Bird",
   "license": "ISC",
   "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
     "path": "^0.12.7",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
