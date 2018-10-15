@@ -1,16 +1,30 @@
 {
   "name": "react-material",
   "version": "1.0.0",
-  "description": "https://medium.freecodecamp.org/how-to-use-reactjs-with-webpack-4-babel-7-and-material-design-ff754586f618",
+  "description": "This is a Tutorial to showcase the usage of React with Webpack and Babel. https://medium.freecodecamp.org/how-to-use-reactjs-with-webpack-4-babel-7-and-material-design-ff754586f618",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack",
-    "start": "webpack-dev-server --open"
+    "webpack": "babel-node ./node_modules/webpack/bin/webpack",
+    "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open"
   },
-  "keywords": [],
-  "author": "Chris Bird",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:drkvogel/react-material.git"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "babel",
+    "creative-tim",
+    "material-design"
+  ],
+  "author": "Chris Bird <chrisjbird@gmail.com> (https://chrisjbird.uk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/creativetimofficial/react-webpack-babel-tutorial/issues"
+  },
+  "homepage": "https://github.com/creativetimofficial/react-webpack-babel-tutorial#readme",
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/node": "^7.0.0",
